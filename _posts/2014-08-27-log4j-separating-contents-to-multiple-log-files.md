@@ -16,7 +16,7 @@ This can be done by defining two appenders in log4j properties and configuring t
 
 Here is the example log4j properties.
 
-```ruby
+~~~ ruby
 log4j.rootLogger=INFO,fileAppender
 
 log4j.logger.requestLogger=INFO, requestAppender
@@ -39,14 +39,14 @@ log4j.appender.requestAppender.Append=true
 log4j.appender.requestAppender.File=requests.log
 log4j.appender.requestAppender.layout=org.apache.log4j.PatternLayout
 log4j.appender.requestAppender.layout.ConversionPattern=%d [%t] %-5p (%C %M:%L) %x - %m%n
-```
+~~~
 
 We have defined two appenders, ***fileAppender*** to output to `server.log` and ***requestAppender*** to output to `requests.log`. 
 Only ***fileAppender*** is added to ***rootLogger***, so any `Logger` instances created by passing java class will be logged to `server.log`.
 
 Example code snippets showing how to log to `server.log`.
 
-```java
+~~~ java
 public class RequestProcessor {
 
     private static final Logger logger = Logger.getLogger(RequestProcessor.class);
@@ -56,13 +56,14 @@ public class RequestProcessor {
         logger.info("Processing Request");
     }
 }
-```
+~~~ 
+{: .language-java}
 
 To log to `requests.log` the `Logger` instance should be created passing `requestLogger` as logger name.
 
 Example code snippets showing how to log to `request.log`.
 
-```java
+~~~ java
 public class RequestInterceptor {
 
     private static final Logger logger = Logger.getLogger("requestLogger"); //Should match name of logger 
@@ -73,7 +74,7 @@ public class RequestInterceptor {
         return true;
     }
 }
-```
+~~~ 
 
 
  

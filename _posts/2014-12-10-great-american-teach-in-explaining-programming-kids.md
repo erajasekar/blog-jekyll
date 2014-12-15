@@ -7,14 +7,23 @@ comments: true
 description: I got wonderful opportunity to volunteer for great american teach-in at local school in Tampa. I did presentation on explaining programming to 3rd to 5th grade students. In this post, I will share by experiences on talking to kids about programming and conversations I had with them.
 ---
 
+
+
 I got wonderful opportunity to volunteer for great american teach-in at Morgan woods elementary school, Tampa. 
 I did presentation on explaining programming to 3rd to 5th grade students.
 In this post, I will share by experiences on talking to kids about programming and conversations I had with them.
+<br>
+
+### Table of Contents
+{:.no_toc}
+
+* Table of Contents Placeholder
+{:toc}
 
 ###Preparation
 
 The invitation letter from school suggested  *"share with students something about your career, your experiences, your hobby, or yourself"*.
-<br>
+
 Soon I learnt that, these talks should be informative but not too lecture-y and be something that  hopefully will hold the kids interest for the 15 or 20 minutes.
 They want to hear about what people do in ***real life*** and what sorts of talents and skills might be required to do that themselves.
 People from all walks of life will present on teach-in from lawn maintenance workers to professional sportsmen. 
@@ -30,6 +39,7 @@ I thought If I get to meet with older students, they might already know some stu
  
 
 ###Presentation Day
+
 ####Schedule
 I was requested to come in between 12pm to 2pm on the day of the presentation. I was scheduled
 for three sessions 12-12:30pm, 1-1:30pm. 1:30-2pm with 5th grade, 3rd grade and 4th grade students respectively.
@@ -137,7 +147,7 @@ I let them ask question at the end of presentation. There wasn't much questions 
 
 After couple of days, I received thank you letters from students along with a picture. 
 
-<img src="http://goo.gl/N2lsyi" height="400px"" width="600px" alt="Great American Teach-in at Morgan Woods Elementary">
+<img src='http://goo.gl/N2lsyi' height='400px' width='600px' alt='Great American Teach-in at Morgan Woods Elementary' />
 
 I didn't really expect this and I was surprised. The students wrote themselves whatever they felt about the presentation. Some of them had also had drawn nice pictures. Most the students thanked for the presentation, wrote they liked it and wanted me to come again. Some of the them quoted the phrases I spoke and asked follow up questions. I was glad that many were able to grasp and remember the information I presented.
  
