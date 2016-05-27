@@ -5,6 +5,7 @@ date: 2016-05-27
 draft: false
 tags: java8 java functional programming
 comments: true
+description: In this post I will provide tips for better exception handling in Java 8 streams using Javaslang Functional Java library.
 analytics: true
 ---
 
