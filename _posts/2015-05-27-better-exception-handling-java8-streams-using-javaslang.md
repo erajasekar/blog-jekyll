@@ -10,11 +10,11 @@ analytics: true
 
 In this post I will provide tips for better exception handling in Java 8 streams using Functional Java library [Javaslang](http://www.javaslang.io/).
 
-###Problem
+##Problem
 
-To illustrate with an example, let's pick a problem of printing day of week for given stream data strings in format `MM/dd/YYYY`. 
+To illustrate with an example, let's we want to print day of week for given stream date strings in format `MM/dd/YYYY`. 
 
-####Initial solution.
+###Initial solution.
 
 Let's start with a initial solution below and iteratively improve on it.
 
@@ -55,7 +55,7 @@ Exception in thread "main" java.time.format.DateTimeParseException: Text '01-01-
 *Huh*, If a date string is invalid, this fails at the first *DateTimeParseException* without continuing with valid dates. 
 <br>
 
-####Java 8 Optional to rescue.
+###Java 8 Optional to rescue.
 
 We can refactor `parseDate` to return `Optional<LocalDate>` to make it discard invalids and continue processing valid dates.
 
@@ -63,7 +63,7 @@ We can refactor `parseDate` to return `Optional<LocalDate>` to make it discard i
 
 /**
  * Converts given date string in format "MM/dd/yyyy" to LocalDate.
- * Returns Optional of LocalDate if it is valid, otherwise Optiona.empty
+ * Returns Optional of LocalDate if it is valid, otherwise Optional.empty
  */
 private static Optional<LocalDate> parseDate(String dateString){
     LocalDate localDate = null;
@@ -90,7 +90,7 @@ public static void main(String args[]) {
 
 ```
 
-This will skip errors and coverts all the valid dates.
+This will skip errors and converts all the valid dates.
 
 ```sh
 WEDNESDAY
@@ -102,7 +102,7 @@ FRIDAY
 
 This is great improvement, but the exception has to be handled within `parseDate` method and can't be passed back to main method to deal with it. We can't make `parseDate` method to throw checked exception as Streams API doesn't play well with methods that throw exceptions. 
 
-#### Javaslang's Try Monaid
+### Better solution with Javaslang's Try Monaid
 
 [Javaslang](http://www.javaslang.io/) is a functional library for Java 8+. We will use `Try` object from Javaslang which can be either a instance of `Success` or `Failure`. Basically [Try](http://www.javaslang.io/javaslang-docs/#_try) is a monadic container type which represents a computation that may either result in an exception, or return a successfully computed value. Here is the modified code using *Try*
 
