@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Better Exception Handling in Java 8 Streams Using Javaslang
-date: 2015-05-27
+date: 2016-05-27
 draft: false
 tags: java8 java functional programming
 comments: true
