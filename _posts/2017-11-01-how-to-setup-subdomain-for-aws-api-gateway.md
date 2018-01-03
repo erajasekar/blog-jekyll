@@ -8,6 +8,7 @@ comments: true
 toc: ul
 description: I needed to setup a subdomain to point to REST service hosted in AWS API Gateway. I will share the exact steps I did to get it working successfully.
 analytics: true
+postId : 'aws-gateway'
 ---
 
 I needed to setup a subdomain for a REST service hosted in AWS API Gateway.  
