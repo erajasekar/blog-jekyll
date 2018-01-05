@@ -15,7 +15,7 @@ title: Home
 
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ post.url }}" id="{{ post.postId }}">
+      <a href="{{ post.url }}">
         {{ post.title }}
       </a>
     </h1>
@@ -30,7 +30,7 @@ title: Home
 
     <br>
 
-    <a href="{{ post.url }}">
+    <a href="{{ post.url }}" id="continue-reading">
         Continue reading...
     </a>
   </div>
@@ -53,3 +53,11 @@ title: Home
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
+<script>
+   var link = document.getElementById('continue-reading');
+
+  console.log("lick to track " + link);
+  analytics.trackLink(link, 'Continue Reading Clicked', {
+    plan: 'Test'
+  });
+</script>

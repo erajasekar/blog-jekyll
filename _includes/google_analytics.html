@@ -4,10 +4,10 @@
   analytics.page();
   }}();
 
-  var link = document.getElementById('aws-gateway');
+ analytics.debug();
+ analytics.on('page', function(event, properties, options) {
 
-  console.log("lick to track " + link);
-  analytics.trackLink(link, 'AWS Gateway Article Clicked', {
-  	plan: 'Test'
-  });
+  console.log("Tracking page " + event);
+
+});
 </script>
