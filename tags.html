@@ -28,3 +28,18 @@ description: "An archive of posts sorted by tag."
   </ul>
   {% endunless %}{% endfor %}
 </div>
+<script type="text/javascript">
+  var link = document.getElementsByClassName('tag');
+  analytics.trackLink(link, 'Tag Clicked', {
+    type: 'Link',
+    tagName: link.text,
+  });
+  console.log(link);
+  analytics.on('track', function(event, properties, options) {
+
+    console.log("Tracking "  +event);
+    console.log(properties);
+    console.log(options);
+
+  });
+</script>

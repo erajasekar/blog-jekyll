@@ -30,7 +30,7 @@ title: Home
 
     <br>
 
-    <a href="{{ post.url }}" id="continue_reading">
+    <a href="{{ post.url }}">
         Continue reading...
     </a>
   </div>
@@ -53,17 +53,4 @@ title: Home
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
-<script type="text/javascript">
-  var link = document.getElementById('continue_reading');
-  analytics.trackLink(link, 'Continue Reading Clicked', {
-    color: 'Green',
-    type: 'Link',
-    pageTitle: document.title
-  });
-  console.log(link);
-  analytics.on('track', function(event, properties, options) {
 
-    console.log("Tracking "  +event);
-
-  });
-</script>
